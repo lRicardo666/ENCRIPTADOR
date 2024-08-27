@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCRIPTADOR</title>
+    <link rel="icon" href="./IMAGENES/ICON.png">
+    <link rel="stylesheet" href="STYLE.CSS"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container"> 
+        <div class="encriptador">
+         <textarea 
+            name="text" 
+            class="text" 
+            id="text" 
+            cols="30" 
+            rows="10"
+            placeholder="Encripta aqui">
+         </textarea>
+            <div class="terminos">
+                <button class="terminos__boton">?</button>
+                <span class="terminos__lindos">Solo letras minusculas, sin simbolos, ni acentos</span>
+            </div>
+            <div class="botones">
+                <button type="button" class="boton__encriptar" onclick="encriptar()"> 
+                    ENCRIPTAR
+                </button>
+                <button type="button" class="boton__desencriptar" onclick="desencriptar()"> 
+                    DESENCRIPTAR
+                </button>
+            
+            </div>
+
+        </div>
+     
+        <div class="ENCRIPTADO">
+            <img src="IMAGENES/muñeco.png" alt="" id="Image1">
+            <div class="mensaje__encriptado" id="mensaje__encriptado">
+                <h2 id="titulo__encriptado"> SIN NADA QUE ENCRIPTAR </h2>
+                 <p id="LETRERO">INGRESA EL TEXTO A ENCRIPTAR O DESENCRIPTAR</p>      
+           </div>
+        </div>  
+    </div>
+</body>
+<script src="JAVA.JS"></script>
+</html>

@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom left, #508C9B 40%, #EEEEEE 100%)  
+}
+.text {
+  position: absolute;
+  width: 42%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  font-family: "italic";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background: #508C9B;
+  color: #ffffff;
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+
+.text::placeholder {
+  color: #ffffff;
+}
+
+.text:focus,
+.text:active {
+  border: none;
+  outline: none;
+}
+
+.terminos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 80%;
+}
+.terminos {
+  position: absolute;
+  display: inline-block;
+  justify-content: flex-start;
+  top: 81%;
+  padding: 2%;
+  margin-left: -8%;
+}
+
+.terminos__boton {
+  background-color: #8065a3; 
+  border: none;
+  color: #faf8f8;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  flex: none;
+  line-height: 150%;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  justify-content: flex;
+}
+
+.terminos__lindos {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 80%; 
+  left: 50%;
+  margin-left: -53%; 
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.terminos__lindos::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.terminos:hover .terminos__lindos {
+  visibility: visible;
+  opacity: 1;
+}
+
+.botones {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 1% 0;
+position: absolute;
+width: 80%;
+left: 12%;
+top: 82%;
+}
+
+.boton__encriptar {
+align-items: center;
+justify-content: center;
+padding: 2%;
+gap: 8px;
+width: 25%;
+background-color: #0a3871;
+border-radius: 24px;
+font-family: "Inter";
+font-size: 18px;
+line-height: 19px;
+text-align: center;
+color: #fff;
+}
+
+.boton__desencriptar {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 2%;
+gap: 8px;
+width: 25%;
+background: #d8dfe8;
+border: 1px solid #0a3871;
+border-radius: 24px;
+font-family: "Inter";
+font-weight: 400;
+font-size: 18px;
+line-height: 19px;
+text-align: center;
+color: #0a3871;
+}
+
+.boton__desencriptar:hover,
+.boton__encriptar:hover {
+margin: 0.3%;
+width: 24.5%;
+padding: 1.8%;
+}
+
+.ENCRIPTADO {
+display: flex;
+justify-content: center;
+position: absolute;
+width: 30%;
+height: 90%;
+left: 60%;
+top: 5%;
+background: #686D76;
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+border-radius: 32px;
+color: #fff;
+}
+
+.mensaje__encriptado {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 1%;
+gap: 16px;
+position: absolute;
+width: 100%;
+top: 65%;
+text-align: center;
+}
+
+.mensaje__encriptado h2 {
+width: 60%;
+font-family: "Inter";
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+color: #ffffff;
+}
+
+.mensaje__encriptado p {
+width: 80%;
+font-family: "Inter";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #ffffff;
+}
+
+.ENCRIPTADO img {
+position: absolute;
+width: 80%;
+height: 50%;
+top: 15%;
+}
+
+/* Responsive design */
+@media (max-width: 57.5em) {
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.encriptador {
+  width: 100%;
+}
+.text {
+  width: 80%;
+  height: 60%;
+  left: 10%;
+  top: 5%;
+}
+.terminos {
+  width: 80%;
+  left: 10%;
+  top: 67%;
+}
+.terminos__boton {
+  font-size: 16px;
+}
+.botones {
+  width: 80%;
+  left: 10%;
+  top: 70%;
+}
+.boton__encriptar,
+.boton__desencriptar {
+  width: 48%;
+  border-radius: 16px;
+}
+.boton__encriptar:hover,
+.boton__desencriptar:hover {
+  margin: 0.3%;
+  width: 47.5%;
+  padding: 1.8%;
+}
+.ENCRIPTADO {
+  width: 80%;
+  height: 15%;
+  left: 10%;
+  top: 80%;
+}
+.mensaje__encriptado {
+  width: 100%;
+  top: 5%;
+}
+.ENCRIPTADO img {
+  top: 0;
+  display: none;
+  visibility: hidden;
+}
+}
